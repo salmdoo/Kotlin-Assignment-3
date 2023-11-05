@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TableLayoutTest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#4E2C8C"
+        android:textColor="@color/white"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <EditText
+            android:id="@+id/edit_text_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Enter Android Version" />
+
+        <EditText
+            android:id="@+id/edit_text_code_made"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Enter Android Code Name" />
+
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:background="#BCB7B7"/>
+
+        <TableLayout
+            android:id="@+id/table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableRow android:background="#E91E63"
+                android:layout_marginTop="10dp">
+                <TextView android:text="Version"
+                    style="@style/CustomRow" />
+                <TextView android:text="Code Name"
+                    style="@style/CustomRow"/>
+            </TableRow>
+            <TableRow android:background="#E91E63"
+                android:layout_marginTop="10dp">
+                <TextView android:text="Android 9.0" style="@style/CustomRow" />
+                <TextView android:text="pin" style="@style/CustomRow"/>
+            </TableRow>
+            <TableRow android:background="#E91E63"
+                android:layout_marginTop="10dp">
+                <TextView android:text="Android 8.0" style="@style/CustomRow" />
+                <TextView android:text="OReo" style="@style/CustomRow"/>
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</LinearLayout>
